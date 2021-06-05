@@ -1,54 +1,32 @@
-﻿//@@Shunting Game@@
-//The following are constants of the shunting game; They are defined only for readability.
-#define M 7;
-#define N 6;
-#define o -1;
-#define a 1;
-#define w 0;
+﻿//@@Assignment Task One@@
 
-//The following are variables of the system, which constitute the state space.
-//The initial valuation of the variables corresponds to the initial schema.
-//Note that top left position is [0][0], while bottom right position is [5],[6]
-//which is different from the Z model in NUS-CS4211/5232.
-//The state invariants in Z model will be guaranteed by the operations.
-//
-//    col number:  0 1 2 3 4 5 6
-var board[N][M] = [o,o,a,a,o,o,o, //0 row number starting from 0
-                  o,o,a,a,o,o,o, //1
-                  a,a,a,w,a,a,a, //2
-                  a,w,a,a,a,w,a, //3
-                  o,o,a,w,o,o,o, //4
-                  o,o,a,a,o,o,o];//5
-// Black position:
-var r:{0..N-1} = 3; //row
-var c:{0..M-1} = 0; //column
+//Define the Grid World Size
 
-Game = [r-1>=0]MoveUp [] [r-2>=0]PushUp
-          [] [r+1<N]MoveDown [] [r+2<N]PushDown
-          [] [c-1>=0]MoveLeft [] [c-2>=0]PushLeft
-          [] [c+1<M]MoveRight [] [c+2<M]PushRight;
+#include "C:\Users\ryanw\Nextcloud\University\Year 4\3806 Robotics, Agents and Reasoning\Assignment\robotics-assignment-2\test\10_pat.csp";
 
-MoveUp = [board[r-1][c]==a]go_up{r=r-1} -> Game;
-PushUp = [board[r-2][c]==a && board[r-1][c]==w] push_up{board[r-2][c]=w;board[r-1][c]=a;r=r-1;} -> Game;
-
-MoveDown = [board[r+1][c]==a]go_down{r=r+1} -> Game;
-PushDown = [board[r+2][c]==a && board[r+1][c]==w] push_down{board[r+2][c]=w;board[r+1][c]=a;r=r+1;} -> Game;
-
-MoveLeft = [board[r][c-1]==a]go_left{c=c-1} -> Game;
-PushLeft = [board[r][c-2]==a && board[r][c-1]==w] push_left{board[r][c-2]=w;board[r][c-1]=a;c=c-1;} -> Game;
-
-MoveRight = [board[r][c+1]==a]go_right{c=c+1} -> Game;
-PushRight = [board[r][c+2]==a && board[r][c+1]==w] push_right{board[r][c+2]=w;board[r][c+1]=a;c=c+1;} -> Game;
+//Set World Parameters
+#define O 3;
+#define H 2;
+#define S 0;
+#define G 1;
 
 
-#define trouble board[0][3] == w;
-#define outside board[4][1] == w;
-#assert Game reaches trouble; //one particular potential trouble position
-#assert Game reaches outside; //testing if a white can be pushed to ourside
+// Set the Starting position:
+var r:{0..N-1} = 1; //row
+var c:{0..M-1} = 1; //column
 
-//note: if you change the cross position in the following, the simulator will not reflect the changes.
-#define goal board[2][2] == w && board[2][3] == w && board[3][2] == w && board[3][3] == w;
-#assert Game reaches goal;
+//Game Choices available to PAT
+Game() =  [r-1>=0]MoveUp	//Can run move up as long as it won't allow you to exit the world
+          [] [r+1<N]MoveDown //Can run move down as long as it won't allow you to move past the bottom wall 
+          [] [c-1>=0]MoveLeft  //Can run move left as long as it won't allow you to move past left wall
+          [] [c+1<M]MoveRight; //Can run move right as long as it won't allow you to move past the right wall
 
-#assert Game |= [] (trouble -> !<> goal); //show the trouble position will prevent the goal
-#assert Game |= [] (trouble -> <> goal);  //testing the impossible
+MoveUp = [board[r-1][c]==O || board[r-1][c] == G]go_up{r=r-1} -> Game;	//Guarded process that checks the cell above is Open
+MoveDown = [board[r+1][c]==O || board[r+1][c]==G]go_down{r=r+1} -> Game; //Guarded process that checks the cell below is Open
+MoveLeft = [board[r][c-1]==O || board[r][c-1]==G]go_left{c=c-1} -> Game; //Guarded process that checks the cell to the left is Open
+MoveRight = [board[r][c+1]==O || board[r][c+1]==G]go_right{c=c+1} -> Game; //Guarded process that checks the cell to the right is Open
+
+#define goal board[r][c] == G; //Define the goal position
+#assert Game reaches goal; //Verify that the goal state can be reached
+
+

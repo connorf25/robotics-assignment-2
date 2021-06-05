@@ -1,6 +1,7 @@
 import sys # For cmd arguments
 import random
 from colorama import init, Fore
+from matplotlib.pyplot import text
 # colorama needs to be initialized in order to be used
 init()
 
@@ -221,8 +222,11 @@ else:
 
 maze = generate_maze(width, height)
 # Write pat file
-text_file = open("mazes/" + str(width) + "_pat.txt", "w")
-text_file.write("[%s]" % ", ".join([item for sublist in maze for item in sublist]))
+text_file = open("test/" + str(width) + "_pat.csp", "w")
+text_file.write("#define M " + str(width) + ";\n")
+text_file.write("#define N " + str(height)+ ";\n")
+text_file.write("var board[N][M] = ")
+text_file.write("[%s]" % ", ".join([item for sublist in maze for item in sublist]) +';')
 text_file.close()
 # Write RL file
 text_file = open("mazes/" + str(width) + "_rl.txt", "w")
