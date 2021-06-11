@@ -1,7 +1,7 @@
 \documentclass[twoside, 12pt, a4paper]{article}
 %\include{IAP_References.bib}
 % List Of Packages
-\usepackage{geometry, graphicx, color, parskip, fancyhdr, setspace, caption, url}
+\usepackage{geometry, graphicx, color, fancyhdr, setspace, caption, url}
 \usepackage{psfrag,amsbsy,amsmath,textcomp,enumerate}
 \usepackage[font=footnotesize]{caption}
 \usepackage[nottoc,numbib]{tocbibind}
@@ -126,6 +126,7 @@
 \fancyfoot[LE,RO]{\thepage}
 \fancyfoot[LO]{Ryan Williamson, Connor Forbes}                    % insert names for footer here
 \fancyfoot[C]{}
+\section{Abstract}
 
 \section{Model the Grid World in PAT}  \label{CSys_AandD}
 
@@ -168,8 +169,8 @@ go\_left -> go\_left -> go\_left -> go\_left -> go\_down -> go\_down -> go\_down
 \end{math}
 \end{center}
 
-\section{Model the Grid World Maze for RL}
-A reinforcement learning model for a Grid World Maze Runner has been developed within python, seperated into two seperate stages the 
+\section{Model the Grid World Maze for RL} \label{ModelRL}
+Reinforcement Learning is an unsupervised learning method where some states, transistions and actions have a corrosponding rewards of actions and then given a goal will determine the method to maximise the reward. This method of unsupervised learning
 \section{Parameterise the Grid World}
 
 \section{Translate the Grid World to a PAT Model and RL Model}
@@ -189,7 +190,7 @@ An experiment has been conducted to compare PAT model verification vs Reinforcem
 \item \textbf{Time Taken -} How long for the model to determine the optimal path
 \item \textbf{Length of Path -} How long the optimal path is
 \end {itemize}
-In order to form a fair comparison the training time required for reinforcement learning will also be measured and factored in as it is a requirement prior to the model running. As reinforcement learning's performance can also be heavily modifed by the identified tuning parameters these will also remain constant throughout experimentation, the same values identified within Section 2 will be used.  The experiment will be completed across seven different generated mazes, beginning with smaller mazes and then spiradically increasing to get a broad overview how each model works as the complexity significantly increases. The table below shows the collected results from the experimentation:
+In order to form a fair comparison the training time required for reinforcement learning will also be measured and factored in as it is a requirement prior to the model running. As reinforcement learning's performance can also be heavily modifed by the identified tuning parameters these will also remain constant throughout experimentation, the same values identified within Section\ref{ModelRL} will be used.  The experiment will be completed across seven different generated mazes, beginning with smaller mazes and then spiradically increasing to get a broad overview how each model works as the complexity significantly increases. A visualisation of the generated mazes has been attached within Appendix \ref{appendix:a}.  The table below shows the collected results from the experimentation:
 
 
 \begin{table}[ht]
@@ -241,21 +242,29 @@ As can be seen, the PAT model verification performs significantly better in all 
 
 \newpage
 \appendix
-\section*{Appendix A: Tested Maze Visualisations}
+\section{Appendix: Tested Maze Visualisations} \label{appendix:a}
+
 \begin{figure}[ht]
-    \centering
-    \subfloat[\centering 5x5 Maze]{{\includegraphics[width=3cm]{5x5.jpg} }}%
-    \qquad
-    \subfloat[\centering 10x10 Maze]{{\includegraphics[width=3cm]{10x10.jpg} }}%
-    \qquad
-    \subfloat[\centering 20x20 Maze]{{\includegraphics[width=5cm]{20x20.jpg} }}%
-    \qquad
-    \subfloat[\centering 40x40 Maze]{{\includegraphics[width=5cm]{40x40.jpg} }}%
-    \qquad
-    \subfloat[\centering 60x60 Maze]{{\includegraphics[width=5cm]{60x60.jpg} }}%
-    \caption{Tested Maze's Visualised}%
-    \label{fig:example}%
+\begin{center}
+\includegraphics[width=3cm]{5x5.jpg} 
+\caption{\label{tab:table-name}5x5 Maze}
+
+\includegraphics[width=3cm]{10x10.jpg} 
+\caption{\label{tab:table-name}10x10 Maze}
+
+\includegraphics[width=8cm]{20x20.jpg} 
+\caption{\label{tab:table-name}20x20 Maze}
+\end {center}
 \end{figure}
 
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[width=10cm]{40x40.jpg} 
+\caption{\label{tab:table-name}40x40 Maze}
+
+\includegraphics[width=10cm]{60x60.jpg} 
+\caption{\label{tab:table-name}60x60 Maze}
+\end {center}
+\end{figure}
 
 \end{document}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.6.8)  11 JUN 2021 10:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.5.20)  11 JUN 2021 12:23
 entering extended mode
 **./main.tex
 (main.tex
@@ -75,23 +75,7 @@ Package: color 2020/02/24 v1.2b Standard LaTeX Color (DPC)
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 147.
-) (C:\Users\ryanw\AppData\Local\Programs\MiKTeX\tex/latex/parskip\parskip.sty
-Package: parskip 2021-03-14 v2.0h non-zero parskip adjustments
-
-(C:\Users\ryanw\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
-Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
-(C:\Users\ryanw\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
-Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
-)
-(C:\Users\ryanw\AppData\Local\Programs\MiKTeX\tex/generic/kvsetkeys\kvsetkeys.s
-ty
-Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
-))
-(C:\Users\ryanw\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
-Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count190
-)) (C:\Users\ryanw\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.st
-y
+) (C:\Users\ryanw\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty
 Package: fancyhdr 2021/01/28 v4.0.1 Extensive control of page headers and foote
 rs
 \f@nch@headwidth=\skip49
@@ -119,8 +103,8 @@ Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
 \caption@hangindent=\dimen155
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count191
-\c@continuedfloat=\count192
+\c@caption@flags=\count190
+\c@continuedfloat=\count191
 )
 (C:\Users\ryanw\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
 \Urlmuskip=\muskip16
@@ -128,8 +112,8 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 (C:\Users\ryanw\AppData\Local\Programs\MiKTeX\tex/latex/psfrag\psfrag.sty
 Package: psfrag 1998/04/11 v3.04 PSfrag (MCG)
-\pfg@pcount=\count193
-\pfg@scount=\count194
+\pfg@pcount=\count192
+\pfg@scount=\count193
 \pfg@temp=\write3
 )
 (C:\Users\ryanw\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
@@ -153,13 +137,13 @@ Package: amstext 2000/06/29 v2.01 AMS text
 (C:\Users\ryanw\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count195
+\inf@bad=\count194
 LaTeX Info: Redefining \frac on input line 234.
-\uproot@=\count196
-\leftroot@=\count197
+\uproot@=\count195
+\leftroot@=\count196
 LaTeX Info: Redefining \overline on input line 399.
-\classnum@=\count198
-\DOTSCASE@=\count199
+\classnum@=\count197
+\DOTSCASE@=\count198
 LaTeX Info: Redefining \ldots on input line 496.
 LaTeX Info: Redefining \dots on input line 499.
 LaTeX Info: Redefining \cdots on input line 620.
@@ -168,15 +152,15 @@ LaTeX Info: Redefining \cdots on input line 620.
 \big@size=\dimen158
 LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
-\macc@depth=\count266
-\c@MaxMatrixCols=\count267
+\macc@depth=\count199
+\c@MaxMatrixCols=\count266
 \dotsspace@=\muskip17
-\c@parentequation=\count268
-\dspbrk@lvl=\count269
+\c@parentequation=\count267
+\dspbrk@lvl=\count268
 \tag@help=\toks18
-\row@=\count270
-\column@=\count271
-\maxfields@=\count272
+\row@=\count269
+\column@=\count270
+\maxfields@=\count271
 \andhelp@=\toks19
 \eqnshift@=\dimen159
 \alignsep@=\dimen160
@@ -207,7 +191,9 @@ Package tocbibind Note: Using section or other style headings.
 
 ) (C:\Users\ryanw\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
 Package: hyperref 2021-02-10 v7.00j Hypertext links for LaTeX
-
+(C:\Users\ryanw\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+)
 (C:\Users\ryanw\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds
 .sty
 Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
@@ -220,6 +206,10 @@ Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
+)
+(C:\Users\ryanw\AppData\Local\Programs\MiKTeX\tex/generic/kvsetkeys\kvsetkeys.s
+ty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
 )
 (C:\Users\ryanw\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefine
 keys.sty
@@ -238,11 +228,13 @@ Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
 (C:\Users\ryanw\AppData\Local\Programs\MiKTeX\tex/latex/auxhook\auxhook.sty
 Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 )
+(C:\Users\ryanw\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
+Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
+)
 \@linkdim=\dimen165
-\Hy@linkcounter=\count273
-\Hy@pagecounter=\count274
-
-(C:\Users\ryanw\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
+\Hy@linkcounter=\count272
+\Hy@pagecounter=\count273
+ (C:\Users\ryanw\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
 File: pd1enc.def 2021-02-10 v7.00j Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
@@ -258,7 +250,7 @@ Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 (C:\Users\ryanw\AppData\Local\Programs\MiKTeX\tex/generic/etexcmds\etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
-\Hy@SavedSpaceFactor=\count275
+\Hy@SavedSpaceFactor=\count274
  (C:\Users\ryanw\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
 File: puenc.def 2021-02-10 v7.00j Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
@@ -271,7 +263,7 @@ Package hyperref Info: Plain pages OFF on input line 4207.
 Package hyperref Info: Backreferencing OFF on input line 4212.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4445.
-\c@Hy@tempcnt=\count276
+\c@Hy@tempcnt=\count275
 LaTeX Info: Redefining \url on input line 4804.
 \XeTeXLinkMargin=\dimen166
 
@@ -283,7 +275,7 @@ Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count277
+\Fld@menulength=\count276
 \Field@Width=\dimen167
 \Fld@charsize=\dimen168
 Package hyperref Info: Hyper figures OFF on input line 6075.
@@ -301,9 +293,9 @@ Package: atbegshi-ltx 2020/08/17 v1.0a Emulation of the original atbegshi packa
 ge
 with kernel methods
 )
-\Hy@abspage=\count278
-\c@Item=\count279
-\c@Hfootnote=\count280
+\Hy@abspage=\count277
+\c@Item=\count278
+\c@Hfootnote=\count279
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 (C:\Users\ryanw\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
@@ -314,8 +306,8 @@ Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atvery packag
 e
 with kernel methods
 )
-\Fld@listcount=\count281
-\c@bookmark@seq@number=\count282
+\Fld@listcount=\count280
+\c@bookmark@seq@number=\count281
 
 (C:\Users\ryanw\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfil
 echeck.sty
@@ -333,7 +325,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 (C:\Users\ryanw\AppData\Local\Programs\MiKTeX\tex/latex/multirow\multirow.sty
 Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
 \multirow@colwidth=\skip62
-\multirow@cntb=\count283
+\multirow@cntb=\count282
 \multirow@dima=\skip63
 \bigstrutjot=\dimen169
 )
@@ -351,11 +343,11 @@ Package: array 2020/10/01 v2.5c Tabular extension package (FMi)
 \ar@cellbox=\box50
 )
 \rotheadsize=\dimen172
-\c@nlinenum=\count284
+\c@nlinenum=\count283
 \TeXr@lab=\toks24
 ) (C:\Users\ryanw\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count285
+\c@float@type=\count284
 \float@exts=\toks25
 \float@box=\box51
 \@float@everytoks=\toks26
@@ -363,17 +355,17 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 )
 (C:\Users\ryanw\AppData\Local\Programs\MiKTeX\tex/latex/subfig\subfig.sty
 Package: subfig 2005/06/28 ver: 1.3 subfig package
-\c@KVtest=\count286
+\c@KVtest=\count285
 \sf@farskip=\skip66
 \sf@captopadj=\dimen173
 \sf@capskip=\skip67
 \sf@nearskip=\skip68
-\c@subfigure=\count287
-\c@subfigure@save=\count288
-\c@lofdepth=\count289
-\c@subtable=\count290
-\c@subtable@save=\count291
-\c@lotdepth=\count292
+\c@subfigure=\count286
+\c@subfigure@save=\count287
+\c@lofdepth=\count288
+\c@subtable=\count289
+\c@subtable@save=\count290
+\c@lotdepth=\count291
 \sf@top=\skip69
 \sf@bottom=\skip70
 )
@@ -383,14 +375,26 @@ Package: notoccite 2000/07/20
 (C:\Users\ryanw\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
 tex.def
 File: l3backend-pdftex.def 2021-02-18 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count293
+\l__color_backend_stack_int=\count292
 \l__pdf_internal_box=\box53
 ) (main.aux
 
 LaTeX Warning: Label `tab:table-name' multiply defined.
 
 
-LaTeX Warning: Label `fig:example' multiply defined.
+LaTeX Warning: Label `tab:table-name' multiply defined.
+
+
+LaTeX Warning: Label `tab:table-name' multiply defined.
+
+
+LaTeX Warning: Label `tab:table-name' multiply defined.
+
+
+LaTeX Warning: Label `tab:table-name' multiply defined.
+
+
+LaTeX Warning: Label `tab:table-name' multiply defined.
 
 )
 \openout1 = `main.aux'.
@@ -452,16 +456,16 @@ LaTeX Font Info:    ... okay on input line 45.
 (C:\Users\ryanw\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count294
+\scratchcounter=\count293
 \scratchdimen=\dimen174
 \scratchbox=\box54
-\nofMPsegments=\count295
-\nofMParguments=\count296
+\nofMPsegments=\count294
+\nofMParguments=\count295
 \everyMPshowfont=\toks27
-\MPscratchCnt=\count297
+\MPscratchCnt=\count296
 \MPscratchDim=\dimen175
-\MPnumerator=\count298
-\makeMPintoPDFobject=\count299
+\MPnumerator=\count297
+\makeMPintoPDFobject=\count298
 \everyMPtoPDFconversion=\toks28
 )
 (C:\Users\ryanw\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
@@ -487,7 +491,7 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 lestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count300
+\c@section@level=\count299
 )
 LaTeX Info: Redefining \ref on input line 45.
 LaTeX Info: Redefining \pageref on input line 45.
@@ -496,7 +500,7 @@ LaTeX Info: Redefining \nameref on input line 45.
 \@outlinefile=\write4
 \openout4 = `main.out'.
 
-<griffithlogo.png, id=43, 201.00093pt x 57.96657pt>
+<griffithlogo.png, id=51, 201.00093pt x 57.96657pt>
 File: griffithlogo.png Graphic file (type png)
 <use griffithlogo.png>
 Package pdftex.def Info: griffithlogo.png  used on input line 48.
@@ -525,23 +529,23 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [1]
-<GridWorld10x10.jpg, id=66, 105.39375pt x 129.48375pt>
+<GridWorld10x10.jpg, id=76, 105.39375pt x 129.48375pt>
 File: GridWorld10x10.jpg Graphic file (type jpg)
 <use GridWorld10x10.jpg>
-Package pdftex.def Info: GridWorld10x10.jpg  used on input line 143.
+Package pdftex.def Info: GridWorld10x10.jpg  used on input line 144.
 (pdftex.def)             Requested size: 142.26378pt x 174.78561pt.
-<GridWorld10x10_PAT.jpg, id=67, 103.88812pt x 127.22531pt>
+<GridWorld10x10_PAT.jpg, id=77, 103.88812pt x 127.22531pt>
 File: GridWorld10x10_PAT.jpg Graphic file (type jpg)
 <use GridWorld10x10_PAT.jpg>
-Package pdftex.def Info: GridWorld10x10_PAT.jpg  used on input line 145.
+Package pdftex.def Info: GridWorld10x10_PAT.jpg  used on input line 146.
 (pdftex.def)             Requested size: 142.26378pt x 174.24132pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 150--151
+Underfull \hbox (badness 10000) in paragraph at lines 151--152
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 158--159
+Underfull \hbox (badness 10000) in paragraph at lines 159--160
 
  []
 
@@ -557,9 +561,9 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.159 \begin{equation}
+l.160 \begin{equation}
                        [1 <./GridWorld10x10.jpg> <./GridWorld10x10_PAT.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 164--165
+Underfull \hbox (badness 10000) in paragraph at lines 165--166
 
  []
 
@@ -572,9 +576,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [2] (main.bbl
-Underfull \vbox (badness 1681) has occurred while \output is active []
-
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -593,31 +594,34 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [4]
-<5x5.jpg, id=95, 51.94406pt x 63.98906pt>
+<5x5.jpg, id=107, 51.94406pt x 63.98906pt>
 File: 5x5.jpg Graphic file (type jpg)
 <use 5x5.jpg>
-Package pdftex.def Info: 5x5.jpg  used on input line 247.
+Package pdftex.def Info: 5x5.jpg  used on input line 249.
 (pdftex.def)             Requested size: 85.35826pt x 105.16435pt.
-<10x10.jpg, id=96, 106.89937pt x 127.97812pt>
+<10x10.jpg, id=108, 106.89937pt x 127.97812pt>
 File: 10x10.jpg Graphic file (type jpg)
 <use 10x10.jpg>
-Package pdftex.def Info: 10x10.jpg  used on input line 249.
+Package pdftex.def Info: 10x10.jpg  used on input line 252.
 (pdftex.def)             Requested size: 85.35826pt x 102.1893pt.
-<20x20.jpg, id=97, 210.7875pt x 254.45062pt>
+<20x20.jpg, id=109, 210.7875pt x 254.45062pt>
 File: 20x20.jpg Graphic file (type jpg)
 <use 20x20.jpg>
-Package pdftex.def Info: 20x20.jpg  used on input line 251.
-(pdftex.def)             Requested size: 142.26378pt x 171.7351pt.
-<40x40.jpg, id=98, 421.575pt x 512.66531pt>
+Package pdftex.def Info: 20x20.jpg  used on input line 255.
+(pdftex.def)             Requested size: 227.62204pt x 274.77928pt.
+<40x40.jpg, id=110, 421.575pt x 512.66531pt>
 File: 40x40.jpg Graphic file (type jpg)
 <use 40x40.jpg>
-Package pdftex.def Info: 40x40.jpg  used on input line 253.
-(pdftex.def)             Requested size: 142.26378pt x 173.00534pt.
-<60x60.jpg, id=99, 633.86812pt x 770.88pt>
+Package pdftex.def Info: 40x40.jpg  used on input line 262.
+(pdftex.def)             Requested size: 284.52756pt x 346.01068pt.
+<60x60.jpg, id=111, 633.86812pt x 770.88pt>
 File: 60x60.jpg Graphic file (type jpg)
 <use 60x60.jpg>
-Package pdftex.def Info: 60x60.jpg  used on input line 255.
-(pdftex.def)             Requested size: 142.26378pt x 173.0053pt.
+Package pdftex.def Info: 60x60.jpg  used on input line 265.
+(pdftex.def)             Requested size: 284.52756pt x 346.03412pt.
+
+
+LaTeX Warning: Float too large for page by 18.80896pt on input line 268.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -627,22 +631,30 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[5 <./5x5.jpg> <./10x10.jpg> <./20x20.jpg> <./40x40.jpg> <./60x60.jpg>]
-(main.aux)
+[5 <./5x5.jpg> <./10x10.jpg> <./20x20.jpg>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[6 <./40x40.jpg> <./60x60.jpg>] (main.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 4C64210B1DA4D073AFA8963C3DDDE0C1;1786.
+(rerunfilecheck)             Checksum: C7E9541F7D1A01335F4B902E33D79E29;2104.
  ) 
 Here is how much of TeX's memory you used:
- 11394 strings out of 479334
- 173836 string characters out of 2857085
- 490340 words of memory out of 3000000
- 28641 multiletter control sequences out of 15000+200000
+ 11058 strings out of 479334
+ 169837 string characters out of 2857084
+ 482899 words of memory out of 3000000
+ 28314 multiletter control sequences out of 15000+200000
  410714 words of font info for 52 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,12n,74p,707b,483s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 71i,12n,74p,828b,497s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\ryanw\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
 1200.pk><C:/Users/ryanw/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
 ts/cm/cmbx12.pfb><C:/Users/ryanw/AppData/Local/Programs/MiKTeX/fonts/type1/publ
@@ -651,9 +663,9 @@ ype1/public/amsfonts/cm/cmr10.pfb><C:/Users/ryanw/AppData/Local/Programs/MiKTeX
 /fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/ryanw/AppData/Local/Program
 s/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/ryanw/AppData/Loca
 l/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on main.pdf (7 pages, 943514 bytes).
+Output written on main.pdf (8 pages, 945516 bytes).
 PDF statistics:
- 145 PDF objects out of 1000 (max. 8388607)
- 32 named destinations out of 1000 (max. 500000)
- 121 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 155 PDF objects out of 1000 (max. 8388607)
+ 30 named destinations out of 1000 (max. 500000)
+ 137 words of extra memory for PDF output out of 10000 (max. 10000000)
 
