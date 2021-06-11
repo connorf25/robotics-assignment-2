@@ -1,0 +1,218 @@
+\documentclass[twoside, 12pt, a4paper]{article}
+%\include{IAP_References.bib}
+% List Of Packages
+\usepackage{geometry, graphicx, color, parskip, fancyhdr, setspace, caption, url}
+\usepackage{psfrag,amsbsy,amsmath,textcomp,enumerate}
+\usepackage[font=footnotesize]{caption}
+\usepackage[nottoc,numbib]{tocbibind}
+\usepackage{hyperref}
+\usepackage{multirow}
+\usepackage{makecell}
+\usepackage{float}
+\usepackage{subfig}
+\usepackage{setspace}
+\usepackage{notoccite}
+%\usepackage{natbib}
+% Define Use Of Packages
+% Geometry
+\geometry{margin = 2cm}
+\newenvironment{where}{\noindent{}where\begin{itemize}}{\end{itemize}}
+\renewcommand{\refname}{REFERENCES}
+\renewcommand{\contentsname}{TABLE OF CONTENTS}
+%\renewcommand{\listfigurename}{LIST OF FIGURES}
+%\renewcommand{\listtablename}{LIST OF TABLES}
+% Enter Information
+\newenvironment{myindentpar}[1]%
+{\begin{list}{}%
+		{\setlength{\leftmargin}{#1}}%
+		\item[]%
+	}
+	{\end{list}}
+
+% Fancyhdr
+\pagestyle{fancy}
+\fancyhead[R]{3806ICT   --Robotics, Agents and Reasoning, Trimester 1, 2021}
+\fancyhead[L]{}
+\fancyfoot[LE,RO]{\thepage}
+\fancyfoot[LO]{Ryan Williamson, Connor Forbes}       % put your names here for fancy footer
+\fancyfoot[RE]{Your Title}            % put title here for fancy header
+\fancyfoot[C]{}
+\renewcommand{\footrulewidth}{0.4pt}
+
+%\bibliographystyle{IEEE}
+
+% Begin The Document
+\begin{document}
+\begin{titlepage}
+\begin{flushright}
+	\includegraphics[height=60px]{griffithlogo.png}
+\end{flushright}
+\begin{large}
+\textbf{Griffith School of Information Technology}\\
+\textbf{Griffith University}
+
+\vspace*{8mm}
+
+\textbf{3806ICT \, -- Robotics, Agents and Reasoning}\\
+\textbf{Trimester 1, 2021}
+\end{large}
+
+\vspace*{15mm}
+
+\begin{Huge}
+\textbf{Grid World Maze Runner}
+\end{Huge}
+
+\vspace*{5mm}
+\begin{large}
+
+
+\vspace*{8mm}
+
+\textbf{Ryan Williamson , s5135470}\\
+\textbf{Connor Forbes , ss5068337}
+
+\vspace*{8mm}
+\begin{myindentpar}{2cm}
+ We, by signing this page, declare that the work presented in this report is all work done by us, unless appropriate reference has been made to the work of others. I acknowledge that should this not be the case the report will receive zero marks and due action may be taken.
+\end{myindentpar}
+
+\vspace{20mm}
+\textbf{Submitted on: \underline{\hspace{50mm}  } }\\
+
+\textbf{Mark Received: \underline{\hspace{50mm}  }  }
+
+\end{large}
+
+
+\vfill
+
+\end{titlepage}
+%-----------------------------------------------------------------------------------------
+
+%next four lines create blank page
+%\pagebreak
+%\pagestyle{empty}
+%\textcolor{white}{This is a blank page}
+%\pagebreak
+
+% Contents page
+
+\pagestyle{fancy}
+\fancyfoot[C]{\thepage}
+\fancyfoot[L,R]{}
+\pagenumbering{roman}
+\setcounter{page}{1}
+
+\newpage
+
+%\cleardoublepage
+%\phantomsection 
+
+% ----------------------------------------------------------------
+\tableofcontents
+
+
+%\listoffigures
+%\listoftables
+
+% ----------------------------------------------------------------
+%Document content goes here.
+\newpage
+\pagenumbering{arabic}
+\setcounter{page}{1}
+\pagestyle{fancy}
+
+\fancyfoot[LE,RO]{\thepage}
+\fancyfoot[LO]{Ryan Williamson, Connor Forbes}                    % insert names for footer here
+\fancyfoot[C]{}
+
+\section{Model the Grid World in PAT}  \label{CSys_AandD}
+
+\subsection{World Representation}
+Before the Grid World can be modelled with PAT each point needs to be parameterised as an integer as global constants can only represent boolean or integer values.This conversion is only required for PAT's internal computation and for readability convention will still be maintained. Each point within the grid world as been converted as per the following:
+\begin{itemize}
+\item  \textbf{‘O’ for open space -} Modelled as a the integer 3
+\item  \textbf{‘H’ for a wall -} Modelled as the integer 2
+\item \textbf{‘G’ for the goal location -} Modelled as the integer 1   
+\item  \textbf{‘S’ for the starting location - }Modelled as the integer 0
+\end {itemize}
+An example 10x10 grid world has been generated and can be seen below along with the PAT's internal representation of the world. 
+\begin{figure}[ht]%
+    \centering
+    \subfloat[\centering Readable Grid World Representation]{{\includegraphics[width=5cm]{GridWorld10x10.jpg} }}%
+    \qquad
+    \subfloat[\centering Internal PAT Representation]{{\includegraphics[width=5cm]{GridWorld10x10_PAT.jpg} }}%
+    \caption{5x5 Grid World Representation}%
+    \label{fig:example}%
+\end{figure}
+\subsection{Game Choices}
+Four guarded choices are available at each game state that can be taken to move the current position around the maze, the guarded process serves to prevent any illegitimate states from being reached where the position is outside the bounds of the maze. \\
+\begin{itemize}
+ \item \textbf{Move Up -} Move the current location up one row
+ \item \textbf{Move Down -} Move the current location down one row
+ \item \textbf{Move Left -} Move the current location left one column
+ \item \textbf{Move Right -} Move the current location right one column
+\end{itemize}
+\subsection{Assertion}
+With the Game choices and actions modelled, an assertion can be made that the goal state is reachable for the current board. The goal state can be defined as \\
+\begin{equation}
+Goal = Board[Row][Col] == G
+\end{equation}
+Where Row and Col are the current position, meaning that the state has traversed through the maze from the starting point to the end location.
+\subsection{Model Verification Testing}
+Using PAT's inbuilt model verification tool and the Game Choice, World Representation and Assertion defined the model checker can run to determine if the current maze is indeed solvable and the resultant optimal path. The below optimal path has been given for the grid world defined within Figure 1, the time taken to calculate the path was 0.0004949s\\
+\begin{center}
+\begin{math}
+go\_left -> go\_left -> go\_left -> go\_left -> go\_down -> go\_down -> go\_down -> go\_down -> go\_left -> go\_down -> go\_left -> go\_left -> go\_down -> go\_down -> go\_right -> go\_right -> go\_right -> go\_right -> go\_right -> go\_right
+\end{math}
+\end{center}
+
+\section{Model the Grid World Maze for RL}
+A reinforcement learning model for a Grid World Maze Runner has been developed within python
+\section{Parameterise the Grid World}
+
+\section{Translate the Grid World to a PAT Model and RL Model}
+Slight modifcations are required to convert the generated maze world from the generated output to eligible PAT and RL models. Extending on the end of the maze generation program two text files are created within the Mazes subdirectory, first the PAT model is written in the following format:
+\begin{itemize}
+ \item Define the starting X position
+ \item Define the starting Y position
+ \item Define the width of the grid world
+ \item Define the height of the grid world
+ \item Define the generated maze as a 1D array
+\end{itemize}
+These items are exported to a .csp file that can be then imported to the PAT model checker for verification.\\
+Following from this the RL model is then written to a .txt file, the RL model only requires the generated maze world as a one dimensional array with no other defining variables. No modification is requried as the initial model for RL was designed to read the maze as a text file.
+\begin {itemize}
+\item Define the generated maze as a 1D array
+\end {itemize}
+
+\section{PAT vs RL for Maze Runner}
+An experiment has been conducted to compare PAT model verification vs Reinforcement Learning in the domain of the maze runner. The experiment will be conducted fairly by testing the models on randomly generated mazes of varying size, starting from 5x5 up to 200x200. Identical grids will be used for comparison with the times for each model to run. The following parameters will be used for comparison:
+\begin {itemize}
+\item \textbf{Time Taken -} How long for the model to determine the optimal path
+\item \textbf{Length of Path -} How long the optimal path is
+\end {itemize}
+In order to form a fair comparison the training time required for reinforcement learning will also be measured and factored in as it is a requirement prior to the model running. As reinforcement learning's performance can also be heavily modifed by the identified tuning parameters these will also remain constant throughout experimentation, the same values identified within Section 2 will be used.  The experiment will be completed across seven different generated mazes, beginning with smaller mazes and then spiradically increasing to get a broad overview how each model works as the complexity significantly increases. The follow sizes will be tested:
+\begin {itemize}
+\item 5x5 Maze
+\item 10x10 Maze
+\item 20x20 Maze
+\item 40x40 Maze
+\item 60x60 Maze
+\item 100x100 Maze
+\item 200x200 Maze
+\end {itemize}
+
+%\section {REFERENCES}
+
+\bibliographystyle{ieeetr}
+\bibliography{CSYS_References}
+
+\newpage
+\appendix
+\section*{Appendix A: Source Code}
+
+Include all source code in this appendix.
+
+\end{document}

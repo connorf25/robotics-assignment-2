@@ -2,7 +2,7 @@
 
 //Define the Grid World Size
 
-#include "C:\Users\ryanw\Nextcloud\University\Year 4\3806 Robotics, Agents and Reasoning\Assignment\robotics-assignment-2\test\10_pat.csp";
+#include "D:\Sync\University\Year 4\3806 Robotics, Agents and Reasoning\Assignment\robotics-assignment-2\mazes\200_pat.csp";
 
 //Set World Parameters
 #define O 3;
@@ -12,8 +12,8 @@
 
 
 // Set the Starting position:
-var r:{0..N-1} = 1; //row
-var c:{0..M-1} = 1; //column
+var r:{0..N-1} = StartX; //row
+var c:{0..M-1} = StartY; //column
 
 //Game Choices available to PAT
 Game() =  [r-1>=0]MoveUp	//Can run move up as long as it won't allow you to exit the world
@@ -28,5 +28,3 @@ MoveRight = [board[r][c+1]==O || board[r][c+1]==G]go_right{c=c+1} -> Game; //Gua
 
 #define goal board[r][c] == G; //Define the goal position
 #assert Game reaches goal; //Verify that the goal state can be reached
-
-

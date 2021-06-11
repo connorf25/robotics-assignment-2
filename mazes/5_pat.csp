@@ -1,0 +1,5 @@
+#define StartX 1;
+#define StartY 3;
+#define M 5;
+#define N 5;
+var board[N][M] = [H, H, H, H, H, H, O, O, S, H, H, O, H, H, H, H, O, O, G, H, H, H, H, H, H];

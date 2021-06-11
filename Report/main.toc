@@ -1,0 +1,10 @@
+\contentsline {section}{\numberline {1}Model the Grid World in PAT}{1}{section.1}%
+\contentsline {subsection}{\numberline {1.1}World Representation}{1}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Game Choices}{1}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Assertion}{2}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}Model Verification Testing}{2}{subsection.1.4}%
+\contentsline {section}{\numberline {2}Model the Grid World Maze for RL}{2}{section.2}%
+\contentsline {section}{\numberline {3}Parameterise the Grid World}{2}{section.3}%
+\contentsline {section}{\numberline {4}Translate the Grid World to a PAT Model and RL Model}{2}{section.4}%
+\contentsline {section}{\numberline {5}PAT vs RL for Maze Runner}{3}{section.5}%
+\contentsline {section}{\numberline {6}REFERENCES}{4}{section.6}%

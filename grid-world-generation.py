@@ -10,6 +10,7 @@ open_space = "O"
 wall = "H"
 start = "S"
 goal = "G"
+StartingPosX = 0
 
 def print_maze(maze):
     for i in range(0, len(maze)):
@@ -188,6 +189,8 @@ def generate_maze (width, height):
         for j in row:
             if (maze[i][j] == open_space):
                 maze[i][j] = start
+                StartingPosX = i
+                StartingPosY = j
                 break
         # Ensure that nested loop is broken after start is assigned
         else:
@@ -210,7 +213,7 @@ def generate_maze (width, height):
             continue
         break
                 
-    return maze
+    return maze, StartingPosX, StartingPosY
 
 if len(sys.argv) == 3:
     width = int(sys.argv[1])
@@ -220,9 +223,11 @@ else:
     height = 10
 
 
-maze = generate_maze(width, height)
+maze, StartX, StartY = generate_maze(width, height)
 # Write pat file
-text_file = open("test/" + str(width) + "_pat.csp", "w")
+text_file = open("mazes/" + str(width) + "_pat.csp", "w")
+text_file.write("#define StartX " + str(StartX) + ";\n")
+text_file.write("#define StartY " + str(StartY) + ";\n")
 text_file.write("#define M " + str(width) + ";\n")
 text_file.write("#define N " + str(height)+ ";\n")
 text_file.write("var board[N][M] = ")
