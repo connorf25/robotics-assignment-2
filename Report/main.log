@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.5.20)  11 JUN 2021 12:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.6.8)  16 JUN 2021 15:06
 entering extended mode
 **./main.tex
 (main.tex
@@ -396,6 +396,12 @@ LaTeX Warning: Label `tab:table-name' multiply defined.
 
 LaTeX Warning: Label `tab:table-name' multiply defined.
 
+
+LaTeX Warning: Label `tab:table-name' multiply defined.
+
+
+LaTeX Warning: Label `tab:table-name' multiply defined.
+
 )
 \openout1 = `main.aux'.
 
@@ -500,7 +506,7 @@ LaTeX Info: Redefining \nameref on input line 45.
 \@outlinefile=\write4
 \openout4 = `main.out'.
 
-<griffithlogo.png, id=51, 201.00093pt x 57.96657pt>
+<griffithlogo.png, id=59, 201.00093pt x 57.96657pt>
 File: griffithlogo.png Graphic file (type png)
 <use griffithlogo.png>
 Package pdftex.def Info: griffithlogo.png  used on input line 48.
@@ -529,23 +535,18 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [1]
-<GridWorld10x10.jpg, id=76, 105.39375pt x 129.48375pt>
+<GridWorld10x10.jpg, id=86, 105.39375pt x 129.48375pt>
 File: GridWorld10x10.jpg Graphic file (type jpg)
 <use GridWorld10x10.jpg>
-Package pdftex.def Info: GridWorld10x10.jpg  used on input line 144.
+Package pdftex.def Info: GridWorld10x10.jpg  used on input line 145.
 (pdftex.def)             Requested size: 142.26378pt x 174.78561pt.
-<GridWorld10x10_PAT.jpg, id=77, 103.88812pt x 127.22531pt>
+<GridWorld10x10_PAT.jpg, id=87, 103.88812pt x 127.22531pt>
 File: GridWorld10x10_PAT.jpg Graphic file (type jpg)
 <use GridWorld10x10_PAT.jpg>
-Package pdftex.def Info: GridWorld10x10_PAT.jpg  used on input line 146.
+Package pdftex.def Info: GridWorld10x10_PAT.jpg  used on input line 147.
 (pdftex.def)             Requested size: 142.26378pt x 174.24132pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 151--152
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 159--160
+Underfull \hbox (badness 10000) in paragraph at lines 152--153
 
  []
 
@@ -561,9 +562,14 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.160 \begin{equation}
-                       [1 <./GridWorld10x10.jpg> <./GridWorld10x10_PAT.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 165--166
+l.153 \begin{itemize}
+                      [1 <./GridWorld10x10.jpg> <./GridWorld10x10_PAT.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 160--161
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 166--167
 
  []
 
@@ -575,7 +581,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[2] (main.bbl
+[2]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -584,7 +590,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[3])
+[3]
+Overfull \hbox (30.4711pt too wide) in paragraph at lines 228--241
+ [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 225--264
+
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -594,34 +609,56 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [4]
-<5x5.jpg, id=107, 51.94406pt x 63.98906pt>
+Underfull \hbox (badness 10000) in paragraph at lines 268--269
+
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[5] (main.bbl)
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[6]
+<5x5.jpg, id=140, 51.94406pt x 63.98906pt>
 File: 5x5.jpg Graphic file (type jpg)
 <use 5x5.jpg>
-Package pdftex.def Info: 5x5.jpg  used on input line 249.
+Package pdftex.def Info: 5x5.jpg  used on input line 283.
 (pdftex.def)             Requested size: 85.35826pt x 105.16435pt.
-<10x10.jpg, id=108, 106.89937pt x 127.97812pt>
+<10x10.jpg, id=141, 106.89937pt x 127.97812pt>
 File: 10x10.jpg Graphic file (type jpg)
 <use 10x10.jpg>
-Package pdftex.def Info: 10x10.jpg  used on input line 252.
+Package pdftex.def Info: 10x10.jpg  used on input line 286.
 (pdftex.def)             Requested size: 85.35826pt x 102.1893pt.
-<20x20.jpg, id=109, 210.7875pt x 254.45062pt>
+<20x20.jpg, id=142, 210.7875pt x 254.45062pt>
 File: 20x20.jpg Graphic file (type jpg)
 <use 20x20.jpg>
-Package pdftex.def Info: 20x20.jpg  used on input line 255.
+Package pdftex.def Info: 20x20.jpg  used on input line 289.
 (pdftex.def)             Requested size: 227.62204pt x 274.77928pt.
-<40x40.jpg, id=110, 421.575pt x 512.66531pt>
+<40x40.jpg, id=143, 421.575pt x 512.66531pt>
 File: 40x40.jpg Graphic file (type jpg)
 <use 40x40.jpg>
-Package pdftex.def Info: 40x40.jpg  used on input line 262.
+Package pdftex.def Info: 40x40.jpg  used on input line 295.
 (pdftex.def)             Requested size: 284.52756pt x 346.01068pt.
-<60x60.jpg, id=111, 633.86812pt x 770.88pt>
+<60x60.jpg, id=144, 633.86812pt x 770.88pt>
 File: 60x60.jpg Graphic file (type jpg)
 <use 60x60.jpg>
-Package pdftex.def Info: 60x60.jpg  used on input line 265.
+Package pdftex.def Info: 60x60.jpg  used on input line 298.
 (pdftex.def)             Requested size: 284.52756pt x 346.03412pt.
 
 
-LaTeX Warning: Float too large for page by 18.80896pt on input line 268.
+LaTeX Warning: Float too large for page by 18.80896pt on input line 301.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -631,7 +668,18 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[5 <./5x5.jpg> <./10x10.jpg> <./20x20.jpg>]
+[7 <./5x5.jpg> <./10x10.jpg> <./20x20.jpg>]
+<UntunedTraining.png, id=150, 847.165pt x 623.32875pt>
+File: UntunedTraining.png Graphic file (type png)
+<use UntunedTraining.png>
+Package pdftex.def Info: UntunedTraining.png  used on input line 330.
+(pdftex.def)             Requested size: 284.52756pt x 209.35143pt.
+<TunedTraining.png, id=152, 856.19875pt x 623.32875pt>
+File: TunedTraining.png Graphic file (type png)
+<use TunedTraining.png>
+Package pdftex.def Info: TunedTraining.png  used on input line 333.
+(pdftex.def)             Requested size: 284.52756pt x 207.13531pt.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -640,21 +688,39 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[6 <./40x40.jpg> <./60x60.jpg>] (main.aux)
+[8]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[9 <./40x40.jpg> <./60x60.jpg>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[10 <./UntunedTraining.png> <./TunedTraining.png>] (main.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: C7E9541F7D1A01335F4B902E33D79E29;2104.
+(rerunfilecheck)             Checksum: C5CCFD4D1385343A10E2B34EDB90A9C6;2534.
  ) 
 Here is how much of TeX's memory you used:
- 11058 strings out of 479334
- 169837 string characters out of 2857084
- 482899 words of memory out of 3000000
- 28314 multiletter control sequences out of 15000+200000
+ 11092 strings out of 479334
+ 170263 string characters out of 2857085
+ 484032 words of memory out of 3000000
+ 28328 multiletter control sequences out of 15000+200000
  410714 words of font info for 52 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,12n,74p,828b,497s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 71i,11n,74p,925b,424s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\ryanw\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
 1200.pk><C:/Users/ryanw/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
 ts/cm/cmbx12.pfb><C:/Users/ryanw/AppData/Local/Programs/MiKTeX/fonts/type1/publ
@@ -663,9 +729,9 @@ ype1/public/amsfonts/cm/cmr10.pfb><C:/Users/ryanw/AppData/Local/Programs/MiKTeX
 /fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/ryanw/AppData/Local/Program
 s/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/ryanw/AppData/Loca
 l/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on main.pdf (8 pages, 945516 bytes).
+Output written on main.pdf (12 pages, 1119670 bytes).
 PDF statistics:
- 155 PDF objects out of 1000 (max. 8388607)
- 30 named destinations out of 1000 (max. 500000)
- 137 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 206 PDF objects out of 1000 (max. 8388607)
+ 48 named destinations out of 1000 (max. 500000)
+ 163 words of extra memory for PDF output out of 10000 (max. 10000000)
 

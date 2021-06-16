@@ -1,12 +1,14 @@
 \contentsline {section}{\numberline {1}Abstract}{1}{section.1}%
 \contentsline {section}{\numberline {2}Model the Grid World in PAT}{1}{section.2}%
 \contentsline {subsection}{\numberline {2.1}World Representation}{1}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Game Choices}{1}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.2}Game Choices}{2}{subsection.2.2}%
 \contentsline {subsection}{\numberline {2.3}Assertion}{2}{subsection.2.3}%
 \contentsline {subsection}{\numberline {2.4}Model Verification Testing}{2}{subsection.2.4}%
 \contentsline {section}{\numberline {3}Model the Grid World Maze for RL}{2}{section.3}%
-\contentsline {section}{\numberline {4}Parameterise the Grid World}{2}{section.4}%
-\contentsline {section}{\numberline {5}Translate the Grid World to a PAT Model and RL Model}{2}{section.5}%
-\contentsline {section}{\numberline {6}PAT vs RL for Maze Runner}{3}{section.6}%
-\contentsline {section}{\numberline {7}REFERENCES}{4}{section.7}%
-\contentsline {section}{\numberline {A}Appendix: Tested Maze Visualisations}{5}{appendix.A}%
+\contentsline {section}{\numberline {4}Parameterise the Grid World}{3}{section.4}%
+\contentsline {section}{\numberline {5}Translate the Grid World to a PAT Model and RL Model}{4}{section.5}%
+\contentsline {section}{\numberline {6}PAT vs RL for Maze Runner}{4}{section.6}%
+\contentsline {section}{\numberline {7}REFERENCES}{6}{section.7}%
+\contentsline {section}{\numberline {A}Appendix: Tested Maze Visualisations}{7}{appendix.A}%
+\contentsline {section}{\numberline {B}Appendix: Testing Environment}{7}{appendix.B}%
+\contentsline {section}{\numberline {C}Appendix: Adjusted Tuning Parameters}{8}{appendix.C}%

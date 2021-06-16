@@ -127,6 +127,7 @@
 \fancyfoot[LO]{Ryan Williamson, Connor Forbes}                    % insert names for footer here
 \fancyfoot[C]{}
 \section{Abstract}
+The following report focusses on model checking and reinforcement learning to gain knowledge and further insight into the area through research and experimentation. The domain of the testing is within a grid maze world, the problem given is to find the shortest most optimal path through the maze from the starting position to the goal position. The model checking tool the Process Analysis Tooklit (PAT) and the artificial intelligence model Reinforcement Learning (RL) are to be compared in terms of both quality of solution and time to solve the problem on a set of randomly generated mazes. To conduct the study models in the domain will need to be developed both within PAT and RL as well as a random maze generation program in order to ensure fair testing in all conditions.
 
 \section{Model the Grid World in PAT}  \label{CSys_AandD}
 
@@ -171,8 +172,8 @@ go\_left -> go\_left -> go\_left -> go\_left -> go\_down -> go\_down -> go\_down
 
 
 \section{Model the Grid World Maze for RL} \label{ModelRL}
-Reinforcement Learning is an unsupervised learning method where some states, transistions and actions have a corrosponding rewards of actions and then given a goal will determine the method to maximise the reward. The method of unsupervised learning implemented for the experiment is a Q-learning algorithm. Each step the algorithm takes amounts to -1 point, while running into a wall is -5 points. Reaching the goal awards the agent with 30 points. The agent attemtps to maximize its score and the best way to do that is reaching the goal in the minimum number of steps.\\
-The learning parameters for this algorithm were tested on various maze sizes and these parameters were selected and maintained for all maze sizes to ensure a fair test:
+Reinforcement Learning is an unsupervised learning method where some states, transistions and actions have a corrosponding rewards of actions and then given a goal will determine the method to maximise the reward. Each step the algorithm takes amounts to -1 point, while running into a wall is -5 points. Reaching the goal awards the agent with 30 points. There are many different variations of the reinforcement learning algorithm each with their own advantages and disadvantages, for this task a Q-learning  algorithm will be used. Q-learning attempts to establish an action-value function, which is the expected value of taking an action at a given state. The training phase attemps to construct a Q table that can be used during test time to take the optimal path to reach the goal.  The agent attemtps to maximize its score and the best way to do that is reaching the goal in the minimum number of steps.\\
+The algorithm involves several tuning parameters that an drastically alter the performance of the agent, the learning parameters for this algorithm were tested on various maze sizes and these parameters were selected and maintained for all maze sizes to ensure a fair test:
 \begin{itemize}
 \item \textbf{Gamma: 0.99 -} The discount rate of the algorithm
 \item \textbf{Alpha: 0.1 -} The learning rate of the algorithm
@@ -180,7 +181,7 @@ The learning parameters for this algorithm were tested on various maze sizes and
 \item \textbf{Maxiter: 1000 -} The maximum number of iterations for the algorithm to take
 \item \textbf{Maxsteps: 1000 -} The maximum number of steps that the algorithm can take before termination
 \end{itemize}
-
+The model is broken up into two seperate phases, first the training phase where the tuning parameters effect how many iterations it runs for and how many steps allowed within each iteration. The actions of the agent at each step is then effected by the Gamma, Alpha and Epsilon value to determine how it explores the maze.During the training phase the model populates the Q table, which represents the action-value function that is used during testing. At each state it references the table and takes the best action possible to reach the goal state, this process is quick and results in extremely quick testing time regardless of the maze size.
 \section{Parameterise the Grid World}
 For the maze generation, a variation of the Randomized Prim’s Algorithm was implemented to generate the maze. The algorithm works as follows:
 \begin{enumerate}
@@ -222,34 +223,27 @@ An experiment has been conducted to compare PAT model verification vs Reinforcem
 \item \textbf{Length of Path -} How long the optimal path is
 \end {itemize}
 In order to form a fair comparison the training time required for reinforcement learning will also be measured and factored in as it is a requirement prior to the model running. As reinforcement learning's performance can also be heavily modifed by the identified tuning parameters these will also remain constant throughout experimentation, the same values identified within Section\ref{ModelRL} will be used.  The experiment will be completed across seven different generated mazes, beginning with smaller mazes and then spiradically increasing to get a broad overview how each model works as the complexity significantly increases. A visualisation of the generated mazes has been attached within Appendix \ref{appendix:mazes}.  The table below shows the collected results from the experimentation:
-
-
 \begin{table}[ht]
 \begin {center}
-\begin{tabular}{ | c | c | c | c | c |}
-
+\begin{tabular}{ | c | c | c | c | c | c|}
 \hline
- \textbf{Maze Size} & \textbf{ Time Taken (s)} &  \textbf{Optimal Path Length} &  \textbf{Training Time (s)} \\
+ \textbf{Maze Size} & \textbf{ Time Taken (s)} &  \textbf{Optimal Path Length} &  \textbf{Training Time (s)} & \textbf{Total Time} \\
 \hline
-5x5 		& 0.0000	&6	 &0.21\\
-10x10 	& 0.0010	&14	 &0.52\\
-20x20 	& 0.0010	&33	 &2.19\\
-40x40		& 0.0010	&76	 &8.51\\
-60x60 	& 0.0190	&Did not complete	 &23.06\\
-100x100	& 0.0190	&Did not complete	 &22.94\\
-200x200	& 0.0230	&Did not complete	 &23.24\\
+5x5 		& 0.0000	&6	 &0.21 & 0.21\\
+10x10 	& 0.0010	&14	 &0.52 & 0.521\\
+20x20 	& 0.0010	&33	 &2.19 & 2.191\\
+40x40		& 0.0010	&76	 &8.51  & 8.511\\
+60x60 	& 0.0050	&177	 &87.38* &87.385\\
+100x100	& 0.0230	&Did not complete	 &280.60* & 280.60\\
+200x200	& 0.0230	&Did not complete	 &396.48* & 396.482\\
 \hline
 \end {tabular}
 \caption{\label{tab:table-name}Reinforcement Learning Results}
 \end {center}
 \end{table}
-
-
-
 \begin{table}[ht]
 \begin {center}
 \begin{tabular}{ | c | c | c | c | c |}
-
 \hline
  \textbf{Maze Size} & \textbf{ Time Taken (s)} &  \textbf{Optimal Path Length}  \\
 \hline
@@ -265,7 +259,16 @@ In order to form a fair comparison the training time required for reinforcement 
 \caption{\label{tab:table-name}PAT Verfication Results}
 \end {center}
 \end{table}
-As can be seen, the PAT model verification performs significantly better in all aspects of testing. Without modfiication to the tuning parameters for larger grid sizes reinforcement learning begins to struggle immensly with exploring enough of the state space to reach the goal location and properly populate enough Q values. With the drastic increases in training time as the grid sizes increases reinforcement learning becomes extremely undesirable for model verification.
+\\\\
+As can be seen, the PAT model verification performs significantly better in all aspects of testing. Without modfiication to the tuning parameters for larger grid sizes reinforcement learning begins to struggle immensly with exploring enough of the state space to reach the goal location and properly populate enough Q values. With the drastic increases in training time as the grid sizes increases reinforcement learning becomes extremely undesirable for model verification. In order to determine what sort of further tuning would be required to the model, the parameters were altered for the 60x60, 100x100 and 200x200 mazes to reflect:
+\begin{itemize}
+\item \textbf{Maxiter: 3000 -} The maximum number of iterations for the algorithm to take
+\item \textbf{Maxsteps: 5000 -} The maximum number of steps that the algorithm can take before termination
+\end{itemize}
+The adjusted parameters can be seen with the table noted by *.This was done to evauluate if the model required further training in order to be able to solve find the goal, as can be seen by the figures within appendix \ref{appendix:Tuning} prior to the adjusted parameters during the testing phase the model was unable to find the goal state. However, after the model was tuned to incorporate more training iterations it was able to find the goal and the model was solvable. This indicates that the larger 100x100  and 200x200 models are also solvable however will require even further tuning and more likely more training time. \\
+
+To ensure a fair test, all testing was completed on the same hardware and software versions, these can be seen within Appendix \ref{appendix:environment}.
+\newpage
 %\section {REFERENCES}
 
 \bibliographystyle{ieeetr}
@@ -277,7 +280,7 @@ As can be seen, the PAT model verification performs significantly better in all 
 
 \begin{figure}[ht]
 \begin{center}
-\includegraphics[width=3cm]{5x5.jpg} 
+\includegraphics[width=3cm]{5x5.jpg}
 \caption{\label{tab:table-name}5x5 Maze}
 
 \includegraphics[width=3cm]{10x10.jpg} 
@@ -287,7 +290,6 @@ As can be seen, the PAT model verification performs significantly better in all 
 \caption{\label{tab:table-name}20x20 Maze}
 \end {center}
 \end{figure}
-
 \begin{figure}[ht]
 \begin{center}
 \includegraphics[width=10cm]{40x40.jpg} 
@@ -295,6 +297,42 @@ As can be seen, the PAT model verification performs significantly better in all 
 
 \includegraphics[width=10cm]{60x60.jpg} 
 \caption{\label{tab:table-name}60x60 Maze}
+\end {center}
+\end{figure}
+
+
+
+
+
+
+
+
+
+
+\section {Appendix: Testing Environment} \label{appendix:environment}
+The tested programs were run on the following hardware: 
+\begin{itemize}
+\item \textbf{Processor:} AMD Ryzen 5 5600X 
+\item \textbf{GPU:} NVIDIA RTX 3070 
+\item \textbf{RAM:} 32GB 3200MHz DDR4
+\end{itemize}
+And the following software:
+\begin{itemize}
+\item \textbf{Python Version:} 3.8.10
+\item \textbf{Windows Version:} 10.0.19043
+\item \textbf{PAT Version:} 3.5.1
+\end{itemize}
+
+\section {Appendix: Adjusted Tuning Parameters} \label{appendix:Tuning}
+
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[width=10cm]{UntunedTraining.png}
+\caption{\label{tab:table-name}Original Tuning Parameters}
+
+\includegraphics[width=10cm]{TunedTraining.png} 
+\caption{\label{tab:table-name}Adjusted Training Parameters}
+
 \end {center}
 \end{figure}
 
