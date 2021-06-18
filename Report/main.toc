@@ -10,5 +10,6 @@
 \contentsline {section}{\numberline {6}PAT vs RL for Maze Runner}{4}{section.6}%
 \contentsline {section}{\numberline {7}REFERENCES}{6}{section.7}%
 \contentsline {section}{\numberline {A}Appendix: Tested Maze Visualisations}{7}{appendix.A}%
-\contentsline {section}{\numberline {B}Appendix: Testing Environment}{7}{appendix.B}%
-\contentsline {section}{\numberline {C}Appendix: Adjusted Tuning Parameters}{8}{appendix.C}%
+\contentsline {section}{\numberline {B}Appendix: Testing Environment}{9}{appendix.B}%
+\contentsline {section}{\numberline {C}Appendix: Adjusted Tuning Parameters}{10}{appendix.C}%
+\contentsline {section}{\numberline {D}Appendix: PAT vs RL Execution Time}{11}{appendix.D}%

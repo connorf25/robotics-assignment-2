@@ -2,8 +2,10 @@
 import sys # For cmd arguments
 import random
 from colorama import init, Fore
-from matplotlib.pyplot import text
+import matplotlib.pyplot as plt
+from matplotlib.pyplot import text, ylabel, yticks
 import numpy as np
+import seaborn as sns
 
 unvisited = "U"
 open_space = "O"
@@ -33,6 +35,18 @@ def print_maze(maze):
             else:
                 print(Fore.RED, f'{2}', end="")
         print('') 
-maze = read_map("mazes/10_rl.txt")
 
-print_maze(maze)
+PAT = [0.0098863,0.0007578, 0.0049444, 0.0500344,0.1773686, 0.7564199,8.874657]
+RL = [0.21, 0.521, 2.191, 8.511, 87.385, 280.6, 396.482]
+sns.set()
+XTicks = ['5x5', '10x10', '20x20', '40x40', '60x60', '100x100', '200x200']
+plt.plot(PAT, label='PAT')
+plt.plot(RL, label='RL')
+plt.legend()
+locs, labels = plt.xticks()
+plt.xticks(locs[1:-1],XTicks)
+plt.xlabel('Maze Sizes')
+plt.ylabel('Run Time (s)')
+plt.title('PAT Vs RL Execution Time')
+plt.savefig('ExecutionTime')
+plt.show()
