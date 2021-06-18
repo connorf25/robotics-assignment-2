@@ -183,7 +183,7 @@ The algorithm involves several tuning parameters that an drastically alter the p
 \end{itemize}
 The model is broken up into two seperate phases, first the training phase where the tuning parameters effect how many iterations it runs for and how many steps allowed within each iteration. The actions of the agent at each step is then effected by the Gamma, Alpha and Epsilon value to determine how it explores the maze.During the training phase the model populates the Q table, which represents the action-value function that is used during testing. At each state it references the table and takes the best action possible to reach the goal state, this process is quick and results in extremely quick testing time regardless of the maze size.
 \section{Parameterise the Grid World}
-For the maze generation, a variation of the Randomized Prim’s Algorithm was implemented to generate the maze. The algorithm works as follows:
+For the maze generation, a variation of the Randomized Prim’s Algorithm\cite{mazegen} was implemented to generate the maze. The algorithm works as follows:
 \begin{enumerate}
 \item Start with a NxN maze full of univisited points (U)
 \item Pick a random cell, mark it as an open space (O) and mark the four directly adjacent (top, left, right, bottom) cells as walls (H) and add to the list of walls
@@ -259,20 +259,22 @@ In order to form a fair comparison the training time required for reinforcement 
 \caption{\label{tab:table-name}PAT Verfication Results}
 \end {center}
 \end{table}
-\\\\
+\newpage
 As can be seen, the PAT model verification performs significantly better in all aspects of testing. Without modfiication to the tuning parameters for larger grid sizes reinforcement learning begins to struggle immensly with exploring enough of the state space to reach the goal location and properly populate enough Q values. With the drastic increases in training time as the grid sizes increases reinforcement learning becomes extremely undesirable for model verification. In order to determine what sort of further tuning would be required to the model, the parameters were altered for the 60x60, 100x100 and 200x200 mazes to reflect:
 \begin{itemize}
 \item \textbf{Maxiter: 3000 -} The maximum number of iterations for the algorithm to take
 \item \textbf{Maxsteps: 5000 -} The maximum number of steps that the algorithm can take before termination
 \end{itemize}
-The adjusted parameters can be seen with the table noted by *.This was done to evauluate if the model required further training in order to be able to solve find the goal, as can be seen by the figures within appendix \ref{appendix:Tuning} prior to the adjusted parameters during the testing phase the model was unable to find the goal state. However, after the model was tuned to incorporate more training iterations it was able to find the goal and the model was solvable. This indicates that the larger 100x100  and 200x200 models are also solvable however will require even further tuning and more likely more training time. \\
+The adjusted parameters can be seen with the table noted by *.This was done to evauluate if the model required further training in order to be able to solve find the goal, as can be seen by the figures within Appendix \ref{appendix:Tuning} prior to the adjusted parameters during the testing phase the model was unable to find the goal state. However, after the max iterations were raised to 3000 and the maximum number of steps was raised to 5000,  it was able to find the goal and the model was solvable. This is because the model has more steps to reach the goal, while also allowing enough iterations for the model to converge. This indicates that the larger 100x100  and 200x200 models are also solvable however will require even further tuning and more likely more training time. \\
 
 To ensure a fair test, all testing was completed on the same hardware and software versions, these can be seen within Appendix \ref{appendix:environment}.
 \newpage
-%\section {REFERENCES}
 
-\bibliographystyle{ieeetr}
-\bibliography{CSYS_References}
+%\section {REFERENCES}
+\begin{thebibliography}{9}
+\bibitem{mazegen}
+A. Kozlova, J. A. Brown and E. Reading, "Examination of representational expression in maze generation algorithms," \textit{2015 IEEE Conference on Computational Intelligence and Games (CIG),} 2015, pp. 532-533, doi: 10.1109/CIG.2015.7317902.
+\end{thebibliography}
 
 \newpage
 \appendix
@@ -290,7 +292,7 @@ To ensure a fair test, all testing was completed on the same hardware and softwa
 \caption{\label{tab:table-name}20x20 Maze}
 \end {center}
 \end{figure}
-\begin{figure}[ht]
+\begin{figure}[bp!]
 \begin{center}
 \includegraphics[width=10cm]{40x40.jpg} 
 \caption{\label{tab:table-name}40x40 Maze}
@@ -300,14 +302,7 @@ To ensure a fair test, all testing was completed on the same hardware and softwa
 \end {center}
 \end{figure}
 
-
-
-
-
-
-
-
-
+\newpage
 
 \section {Appendix: Testing Environment} \label{appendix:environment}
 The tested programs were run on the following hardware: 
@@ -323,8 +318,9 @@ And the following software:
 \item \textbf{PAT Version:} 3.5.1
 \end{itemize}
 
-\section {Appendix: Adjusted Tuning Parameters} \label{appendix:Tuning}
+\newpage
 
+\section {Appendix: Adjusted Tuning Parameters} \label{appendix:Tuning}
 \begin{figure}[ht]
 \begin{center}
 \includegraphics[width=10cm]{UntunedTraining.png}
@@ -332,7 +328,6 @@ And the following software:
 
 \includegraphics[width=10cm]{TunedTraining.png} 
 \caption{\label{tab:table-name}Adjusted Training Parameters}
-
 \end {center}
 \end{figure}
 
